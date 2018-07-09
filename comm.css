@@ -1,0 +1,460 @@
+@charset "utf-8";
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+	margin: 0;
+	padding: 0
+}
+fieldset, img {
+	border: 0 none
+}
+dl, ul, ol, menu, li {
+	list-style: none
+}
+blockquote, q {
+	quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none
+}
+input, select, textarea, button {
+	vertical-align: middle
+}
+button {
+	border: 0 none;
+	background-color: transparent;
+	cursor: pointer
+}
+body {
+	background: #fff
+}
+body, th, td, input, select, textarea, button {
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: 'NotoSansKR', '맑은고딕', 'Malgun Gothic', '돋움', dotum, sans-serif;
+	color: #333
+} /* color값은 디자인가이드에 맞게사용 */
+a {
+	color: #333;
+	text-decoration: none
+}
+a:active, a:hover {
+	text-decoration: none
+}
+address, caption, cite, code, dfn, em, var {
+	font-style: normal;
+	font-weight: normal
+}
+/* global */
+#daumIndex {
+	overflow: hidden;
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 1px;
+	margin: 0;
+	padding: 0
+} /* 스킵네비게이션 */
+.ir_pm {
+	display: block;
+	overflow: hidden;
+	font-size: 0px;
+	line-height: 0;
+	text-indent: -9999px
+} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: -10;
+	width: 100%;
+	height: 100%
+} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px
+} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),  local('MaterialIcons-Regular'),  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.wrap{
+	min-width: 1600px;
+	overflow: hidden;
+}
+.header {
+	height: 88px;
+	margin: 0 auto;
+	width: 1140px;
+}
+.rnb {
+	text-align: center;
+	margin: 0 5%;
+	padding-top: 25px;
+}
+.logo {
+	float: left;
+	height: 38px;
+}
+.menubar {
+	display: inline-block;
+	padding-top: 5px;
+	font-size: 16px;
+}
+.menubar ul {
+	display: flex;
+}
+.menubar ul li {
+	padding: 0 20px;
+}
+.menubar ul li a {
+	color: #333;
+	padding: 5px 15px;
+}
+.menubar ul li a:hover {
+	color: lightblue;
+}
+.menubar_right {
+	float: right;
+}
+.login_button, .add_button {
+	display: inline-block;
+}
+.login_button {
+	padding: 7px 10px;
+	border: 1px solid #888;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.add_button {
+	padding: 8px 15px;
+	color: #fff;
+	background: #28a745
+}
+.login_button:hover {
+	color: #0094FF;
+}
+.login_button {
+}
+.login_button i, .add_button i {
+	vertical-align: middle;
+}
+.login_button i {
+	margin-top: -3px;
+}
+.material-icons.md-16 {
+	font-size: 16px;
+}
+.material-icons.md-18 {
+	font-size: 18px;
+}
+.material-icons.md-40 {
+	font-size: 40px;
+}
+.sectionA {
+	height: 513px;
+width: 1600px;
+	background: url(imgs/bg1.jpg) center no-repeat;
+	position: relative;
+}
+.sectionA::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+.sectionA_txt {
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	left: 50%;
+	margin-left: -320px;
+	top: 120px;
+}
+.sectionA_txt h1 {
+	font-size: 65px;
+	font-weight: 700;
+	letter-spacing: -1;
+}
+.sectionA_txt p {
+	line-height: 1.5;
+	padding-top: 15px;
+	font-size: 20px;
+	font-weight: 700;
+}
+.sectionA_txt small {
+	display: inline-block;
+	font-size: 14px;
+	padding-top: 40px;
+	line-height: 1.5;
+	font-weight: 700;
+}
+.menubar ul {
+	margin: 0 auto;
+	text-align: center;
+}
+.sub_button {
+	padding-top: 15px;
+}
+.sub_button li {
+	display: inline-block;
+}
+.sub_button li a {
+	font-size: 12px;
+	color: #fff;
+	padding: 4px 10px;
+	font-weight: 200;
+	border: 1px solid #fff;
+}
+.sectionB{
+	height: 700px;
+}
+.section_tit {
+	text-align: center;
+	padding: 100px 0;
+}
+.section_tit h2{
+	font-size: 30px;
+	letter-spacing: -1;
+	color: #333;
+}
+.section_tit p {
+	font-size: 18px;
+	color: #777;
+}
+.wrap_card{
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1140px;
+}
+.g_a{
+	background:#fff;	
+	width: 360px;
+	box-shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.g_a img{
+display: block;
+	width: 360px;
+}
+.card_txt{
+	padding: 20px;
+}
+.card_txt h2 a{
+	transition-duration: 0.3s;
+	transition-property: all;
+}
+.card_txt h2 a:hover{
+	color: #00137FFF;
+}
+.card_txt i{
+	display: inline-block;
+	vertical-align: bottom;
+	padding-right: 5px;
+}
+.g_a_txt h2{
+	font-size: 18px;
+}
+.card_txt span{
+	display: inline-block;
+	padding: 10px 15px 0 0;
+	color: #888;
+	font-size: 12px;
+}
+.card_txt p{
+	color: #777;
+}
+
+/*여기서부터 작업한 내역입니다.*/
+.category_list{
+	width: 1140px;
+	margin: 0 auto;
+	justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.g_c{
+	margin-bottom: 100px;
+	width: 270px;
+	box-shadow: 0px 7px 16px 0px rgba(0,0,0,0.09);
+	position: relative
+}
+.cetegory_head{
+	text-align: center;
+	border-bottom: solid 3px #F4F7F9;
+}
+.cetegory_head h3{
+	padding-bottom: 8px;
+}
+.wrap_cetegory{
+	padding: 25px;
+}
+.g_d{
+	text-align: center;
+}
+.cetegory_body ul li span{
+	display: inline-block;
+	font-size: 10px;
+	padding: 3px 5px;
+	float: right;
+	border-radius: 5px;
+	background: #B6FFA8;
+}
+.cetegory_body ul li{
+	padding: 11px 0;
+	font-size: 13px;
+	width: 100%;
+	border-bottom: 1px solid #F4F7F9;
+}
+.cetegory_body ul li:hover{
+	text-decoration: underline
+}
+.footer{
+	width: 1600px;
+	background:#232425;
+}
+.wrap_footerA{
+	margin: 0 auto;
+	padding: 70px 0;
+	width: 1140px;
+	display: flex;
+	justify-content: space-between;
+}
+.footer_row1{
+	width: 270px;
+}
+.footer_row1 p{
+	line-height: 26px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+}
+.footer_row2{
+	width: 160px;
+}
+.footer_row2 h3{
+	font-size: 16px;
+	margin-bottom: 25px;
+	color: #fff;
+}
+.footer_row2 li{
+margin-bottom: 10px;
+}
+.footer_row2 a{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	color: #797979;
+}
+.footer_row2 a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+.footer_row3{
+	width: 350px;
+}
+.area_row3{
+	background: #46484A;
+	padding: 18px 30px;
+	border-radius: 2px;
+}
+.area_row3 p{
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+}
+.wrap_footerB{
+	background: #363839;
+}
+.footer_bottom{
+	display: flex;
+	padding: 30px 0;
+	margin: 0 auto;
+	width: 1140px;
+	justify-content: space-between
+}
+.footer_bottom p{
+	display: block;
+	color: #fff;
+}
+.footer_bottom ul{
+	padding-right: 70px;	
+}
+.footer_bottom ul li{
+	display: inline-block;
+	padding-left: 10px;
+}
+.footer_bottom ul li img{
+	display: block;
+}
+.wrap_ad_search{
+	background: red;
+	position: absolute;
+	left: 17%;
+	top: 89%;
+}
+.ad_search{
+	display: flex;
+	padding:30px;
+	box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.12);
+	background: #fff;
+}
+.ad_search .search{
+	height: 40px;
+	width: 370px;
+	padding: 3px 10px;
+	margin-right: 10px;
+	border-radius: 2px;
+	box-shadow: none;
+	border: 1px solid #ced4da;
+}
+.ad_search .button{
+	background: #5672f9;
+	color: #fff;
+	padding: 11px 30px;
+	border-radius: 4px;
+	cursor:pointer;
+	border: none;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+.ad_search .button:hover{
+	background: #1F3C9B;
+}
