@@ -181,7 +181,7 @@ address, caption, cite, code, dfn, em, var {
 }
 .sectionA {
 	height: 513px;
-width: 1600px;
+	min-width: 1600px;
 	background: url(imgs/bg1.jpg) center no-repeat;
 	position: relative;
 }
@@ -346,7 +346,7 @@ display: block;
 	text-decoration: underline
 }
 .footer{
-	width: 1600px;
+    min-width: 1600px;
 	background:#232425;
 }
 .wrap_footerA{
@@ -426,7 +426,7 @@ margin-bottom: 10px;
 .wrap_ad_search{
 	background: red;
 	position: absolute;
-	left: 17%;
+	left: 25%;
 	top: 89%;
 }
 .ad_search{
